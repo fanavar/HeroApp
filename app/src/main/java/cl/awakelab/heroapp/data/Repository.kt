@@ -3,8 +3,8 @@ package cl.awakelab.heroapp.data
 import android.util.Log
 import androidx.lifecycle.LiveData
 import cl.awakelab.heroapp.data.local.HeroDao
-import cl.awakelab.heroapp.data.local.HeroDetailEntity
-import cl.awakelab.heroapp.data.local.HeroEntity
+import cl.awakelab.heroapp.data.local.detail.HeroDetailEntity
+import cl.awakelab.heroapp.data.local.list.HeroEntity
 import cl.awakelab.heroapp.data.remote.HeroApi
 
 class Repository(private val heroApi: HeroApi, private val heroDao: HeroDao) {

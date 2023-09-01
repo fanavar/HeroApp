@@ -1,9 +1,9 @@
 package cl.awakelab.heroapp.data
 
-import cl.awakelab.heroapp.data.local.HeroDetailEntity
-import cl.awakelab.heroapp.data.local.HeroEntity
-import cl.awakelab.heroapp.data.remote.Hero
-import cl.awakelab.heroapp.data.remote.HeroDetail
+import cl.awakelab.heroapp.data.local.detail.HeroDetailEntity
+import cl.awakelab.heroapp.data.local.list.HeroEntity
+import cl.awakelab.heroapp.data.remote.list.Hero
+import cl.awakelab.heroapp.data.remote.detail.HeroDetail
 
 fun Hero.toHeroEntity(): HeroEntity {
     return HeroEntity(
@@ -16,7 +16,7 @@ fun Hero.toHeroEntity(): HeroEntity {
     )
 }
 
-fun HeroDetail.toHeroDetailEntity(): HeroDetailEntity{
+fun HeroDetail.toHeroDetailEntity(): HeroDetailEntity {
     return HeroDetailEntity(
         id = this.id,
         name = this.name,

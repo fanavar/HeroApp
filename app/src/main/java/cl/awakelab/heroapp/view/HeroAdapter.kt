@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import cl.awakelab.heroapp.R
-import cl.awakelab.heroapp.data.local.HeroEntity
-import cl.awakelab.heroapp.databinding.FragmentHeroListBinding
+import cl.awakelab.heroapp.data.local.list.HeroEntity
 import cl.awakelab.heroapp.databinding.ItemHeroBinding
 import coil.load
 

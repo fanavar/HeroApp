@@ -15,6 +15,7 @@
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
 
+        android:backgroundTint="#BBDEFB"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +34,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/white"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +70,8 @@
                 android:layout_marginBottom="4dp"
 
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/secondary_text"
+                android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +87,8 @@
                 android:layout_marginEnd="32dp"
 
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/primary_text"
+                android:textStyle="normal|bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cvItemImage" />

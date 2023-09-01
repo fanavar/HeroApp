@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import cl.awakelab.heroapp.data.local.detail.HeroDetailEntity
+import cl.awakelab.heroapp.data.local.list.HeroEntity
 
 @Database(entities = [HeroEntity::class, HeroDetailEntity::class], version = 4)
 abstract class HeroDatabase: RoomDatabase() {

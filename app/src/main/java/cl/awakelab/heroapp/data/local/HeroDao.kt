@@ -5,6 +5,8 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import cl.awakelab.heroapp.data.local.detail.HeroDetailEntity
+import cl.awakelab.heroapp.data.local.list.HeroEntity
 
 @Dao
 interface HeroDao {

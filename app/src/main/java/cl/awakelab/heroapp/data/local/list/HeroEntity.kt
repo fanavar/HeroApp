@@ -1,4 +1,4 @@
-package cl.awakelab.heroapp.data.local
+package cl.awakelab.heroapp.data.local.list
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

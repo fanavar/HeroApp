@@ -1,8 +1,11 @@
 package cl.awakelab.heroapp.view
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import cl.awakelab.heroapp.R
 import cl.awakelab.heroapp.data.local.HeroEntity
 import cl.awakelab.heroapp.databinding.FragmentHeroListBinding
 import cl.awakelab.heroapp.databinding.ItemHeroBinding
@@ -42,6 +45,11 @@ class HeroAdapter: RecyclerView.Adapter<HeroAdapter.HeroViewHolder>() {
             heroesViews.tvNameItem.text = hero.name
             heroesViews.tvPowerItem.text = hero.power
             heroesViews.imageItem.load(hero.imageLink)
+            heroesViews.cvItem.setOnClickListener{
+                val bundle = Bundle()
+                bundle.putInt("id", hero.id)
+                Navigation.findNavController(heroesViews.root).navigate(R.id.action_heroListFragment_to_heroDetailFragment, bundle)
+            }
         }
     }
 

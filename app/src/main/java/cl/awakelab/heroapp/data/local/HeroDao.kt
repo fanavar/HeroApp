@@ -14,4 +14,10 @@ interface HeroDao {
     @Query("Select * from table_heroes order by id asc")
     fun getHeroes(): LiveData<List<HeroEntity>>
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertHeroDetail(heroDetailEntity: HeroDetailEntity)
+
+    @Query("Select * from table_detail_heroes where id = :id")
+    fun getHeroDetail(id: Int): LiveData<HeroDetailEntity>
+
 }

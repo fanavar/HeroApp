@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class HeroViewModel(application: Application): AndroidViewModel(application) {
     private val repository: Repository
     fun heroLiveData() = repository.getHeroEntity()
-   // fun heroDetailLiveData() = repository.getHeroDetailEntity()
+    fun heroDetailLiveData(id: Int) = repository.getHeroDetailEntity(id)
 
     init{
         val api = HeroRetrofit.getRetrofitHero()
@@ -23,7 +23,7 @@ class HeroViewModel(application: Application): AndroidViewModel(application) {
         repository.getHeroes()
     }
     fun getHeroDetail(id: Int) = viewModelScope.launch{
-      //  repository.getHeroDetail(id)
+        repository.getHeroDetail(id)
     }
 
 

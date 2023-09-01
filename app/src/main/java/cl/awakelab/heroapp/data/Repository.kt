@@ -16,8 +16,8 @@ class Repository(private val heroApi: HeroApi, private val heroDao: HeroDao) {
 
             val phones = response.body()
             if (phones != null) {
-                //val heroEntities = phones.map { it.toHeroEntity() }
-                //heroDao.insertHeroes(heroEntities)
+                val heroEntities = phones.map { it.toHeroEntity() }
+                heroDao.insertHeroes(heroEntities)
 
             } else {
                 Log.e("repository", response.errorBody().toString())

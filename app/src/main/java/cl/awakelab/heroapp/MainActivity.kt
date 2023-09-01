@@ -13,10 +13,13 @@ App listado, detalle y correo de heroes
     [x] Entity
     [x] DetailEntity
     [x] Dao (es una interface)
-[] Remote:
-    [] DataClass
-    [] API (es una interface)
-    [] RetroFit
+[x] Remote:
+    [x] DataClass
+    [x] DetailDataClass
+    [x] API (es una interface)
+    [x] RetroFit
+[x]Repository
+[]View:
 [] 2 pantallas:
     [] Listado: RecyclerView + ViewHolder + Adapter
     [] Detalle: RecyclerView + ViewHolder + Adapter

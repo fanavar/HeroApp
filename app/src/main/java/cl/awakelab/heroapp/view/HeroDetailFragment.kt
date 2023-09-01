@@ -1,5 +1,7 @@
 package cl.awakelab.heroapp.view
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -32,11 +34,29 @@ class HeroDetailFragment : Fragment() {
                 binding.tvPoder.text = detailHero.power
                 binding.tvCreacion.text = detailHero.creationYear.toString()
                 binding.tvColor.text = detailHero.color
-                binding.tvTraduccion.text = detailHero.traduccion
-
+                if(!detailHero.translation){
+                    binding.tvTraduccion.text = "sin traduccion"
+                }else{
+                    binding.tvTraduccion.text = "cuenta con traduccion al español"
+                }
             }
         })
+        binding.fab.setOnClickListener{
+            val contact = "Comicconchile@hotmail.com"
+            val emailIntent = Intent(Intent.ACTION_SENDTO)
+            val heroName = binding.tvName.text.toString()
+            val heroId = id
+            val subject = "Votación $heroName"
+            val emailText = "Hola:\n Quiero que el siguiente super héroe $heroName aparezca en la nueva edición de biografías animadas.\n" +
+                    "Número cotacto: +569________"
+            val uriText = "mailto:$contact" +
+                    "?subject=" + Uri.encode(subject) +
+                    "&body=" + Uri.encode(emailText)
+            val uri = Uri.parse(uriText)
+            emailIntent.data = uri
 
+            startActivity(Intent.createChooser(emailIntent, "Votación..."))
+        }
 
 
 

@@ -13,5 +13,5 @@ data class HeroDetailEntity (
     @SerializedName("poder") val power: String,
     @SerializedName("Año_creacion") val creationYear: Int,
     val color: String,
-    val traduccion: String
+    @SerializedName("traduccion") val translation: Boolean
         )

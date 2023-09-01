@@ -25,6 +25,6 @@ fun HeroDetail.toHeroDetailEntity(): HeroDetailEntity{
         power = this.power,
         creationYear = this.creationYear,
         color = this.color,
-        traduccion = this.translation
+        translation = this.translation
     )
 }

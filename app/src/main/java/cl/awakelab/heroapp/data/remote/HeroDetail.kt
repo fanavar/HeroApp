@@ -10,6 +10,6 @@ class HeroDetail (
     @SerializedName("poder") val power: String,
     @SerializedName("Año_creacion") val creationYear: Int,
     val color: String,
-    @SerializedName("traduccion") val translation: String
+    @SerializedName("traduccion") val translation: Boolean
 
     )

@@ -11,11 +11,12 @@ App listado, detalle y correo de heroes
 [x] Local:
     [x] DataBase
     [x] Entity
+    [x] DetailEntity
     [x] Dao (es una interface)
-[x] Remote:
-    [x] DataClass
-    [x] API (es una interface)
-    [x] RetroFit
+[] Remote:
+    [] DataClass
+    [] API (es una interface)
+    [] RetroFit
 [] 2 pantallas:
     [] Listado: RecyclerView + ViewHolder + Adapter
     [] Detalle: RecyclerView + ViewHolder + Adapter
